@@ -1,0 +1,175 @@
+        :root {
+            --primary-color: #1e88e5;
+            --primary-dark: #1565c0;
+            --primary-light: #64b5f6;
+            --secondary-color: #42a5f5;
+            --background-color: #e3f2fd;
+            --card-color: #bbdefb;
+            --text-color: #0d47a1;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        select, button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            background-color: var(--primary-light);
+            color: var(--text-color);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        select {
+            min-width: 150px;
+        }
+        
+        button:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+        
+        .animal-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .animal-card {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .animal-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .animal-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .animal-info {
+            padding: 1rem;
+        }
+        
+        .animal-fact {
+            font-style: italic;
+            margin: 0.5rem 0;
+        }
+        
+        .animal-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .like-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .like-button.liked {
+            background-color: #e53935;
+        }
+        
+        .share-button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .news-feed {
+            margin-top: 3rem;
+            padding: 1rem;
+            background-color: var(--card-color);
+            border-radius: 8px;
+        }
+        
+        .news-feed h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        .news-item {
+            background-color: var(--white);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+        
+        @media (max-width: 768px) {
+            .animal-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }

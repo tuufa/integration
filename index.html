@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа для любителей животных</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Социальная платформа для любителей животных</h1>
+    </header>
+    
+    <div class="container">
+        <div class="controls">
+            <select id="animal-type">
+                <option value="">Выберите животное</option>
+                <option value="dog">Собаки</option>
+                <option value="cat">Кошки</option>
+                <option value="bird">Птицы</option>
+            </select>
+            
+            <button id="get-animals">Показать животных</button>
+            <button id="get-facts">Показать факты</button>
+        </div>
+        
+        <div id="animal-container" class="animal-gallery">
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            Загрузка данных...
+        </div>
+        
+        <div class="news-feed">
+            <h2>Новостная лента</h2>
+            <div id="news-container">
+                <p>Здесь будут отображаться понравившиеся изображения, которыми поделились пользователи.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
