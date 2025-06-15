@@ -173,3 +173,52 @@
                 align-items: center;
             }
         }
+
+		#auth-forms {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			background: var(--white);
+			padding: 15px;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			z-index: 1000;
+			width: 250px;
+		}
+
+		#auth-forms input {
+			width: 100%;
+			padding: 8px;
+			margin-bottom: 8px;
+			border: 1px solid var(--primary-light);
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		#auth-forms button {
+			width: 100%;
+			padding: 8px;
+			margin-bottom: 5px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		#login-button, #register-button {
+			background-color: var(--primary-color);
+			color: white;
+		}
+
+		#logout-button {
+			background-color: var(--primary-dark);
+			color: white;
+			display: none;
+		}
+
+		#show-register, #show-login {
+			background-color: transparent;
+			color: var(--text-color);
+			text-decoration: underline;
+			padding: 0;
+			margin-top: 5px;
+		}
